@@ -159,6 +159,8 @@ SWITCH_DECLARE(void) rayo_actor_destroy(struct rayo_actor *actor, const char *fi
 SWITCH_DECLARE(int) rayo_call_is_joined(struct rayo_call *call);
 SWITCH_DECLARE(int) rayo_call_is_faxing(struct rayo_call *call);
 SWITCH_DECLARE(void) rayo_call_set_faxing(struct rayo_call *call, int faxing);
+SWITCH_DECLARE(int) rayo_call_is_call_progress(struct rayo_call *call);
+SWITCH_DECLARE(void) rayo_call_set_call_progress(struct rayo_call *call, int call_progress);
 SWITCH_DECLARE(const char *) rayo_call_get_dcp_jid(struct rayo_call *call);
 
 #define rayo_mixer_get_name(mixer) RAYO_ID(mixer)
