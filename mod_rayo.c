@@ -2546,7 +2546,7 @@ static iks *on_rayo_call_progress(struct rayo_actor *call, struct rayo_message *
 		response = iks_new_error_detailed(node, STANZA_ERROR_BAD_REQUEST, "Missing flag to attrib");
 	} else {
 		int call_progress = strncmp("1", flag, 1) ? 1 : 0;
-		switch_log_printf(SWITCH_CHANNEL_UUID_LOG(rayo_call_get_uuid(call)), SWITCH_LOG_DEBUG, "%s is setting call_progress %d\n", call_progress);
+		switch_log_printf(SWITCH_CHANNEL_UUID_LOG(rayo_call_get_uuid(call)), SWITCH_LOG_DEBUG, "call_progress set to %d\n", call_progress);
 		rayo_call_set_call_progress(RAYO_CALL(call), call_progress);
 		response = iks_new_iq_result(node);
 	}
